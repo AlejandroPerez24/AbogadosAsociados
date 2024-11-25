@@ -1,0 +1,298 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container_header {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px 20px; 
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    position: fixed; 
+    width: 100%;
+
+    background: white;
+    color: white;
+    padding: 10px 0;
+    top: 0; 
+    z-index: 1000;
+
+}
+
+.header .logo img {
+    max-width: 150px;
+}
+
+.header .nav {
+    text-align: right;
+}
+
+.nav-list {
+    list-style: none; 
+    display: flex; 
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-list a {
+    text-decoration: none; 
+    color: black; 
+    font-weight: bold;
+    font-size: 12px; 
+    transition: color 0.3s ease; 
+}
+
+.nav-list a:hover {
+    color: #daa806de; 
+}
+
+/* Banner styles */
+.banner_uno {
+    margin: 0; 
+    width: 100%; 
+    height: 250px; 
+    overflow: hidden; 
+    position: relative; 
+}
+
+.banner_dos {
+    margin: 0; 
+    width: 100%; 
+    height: 180px; 
+    overflow: hidden; 
+    position: relative; 
+    margin-bottom: 40px; 
+    
+}
+
+.banner-image {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transform: translateY(0); 
+    transition: transform 0.5s ease; 
+}
+
+/* Efecto para desplazar las imágenes hacia abajo */
+.banner:hover img {
+    transform: translateY(20px); /* Mueve hacia abajo en hover */
+}
+
+.banner-text_uno {
+    position: absolute; 
+    top: 70%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+    font-size: 42px;
+    font-weight: bold; 
+    font-family: 'Roboto', sans-serif; 
+    text-align: center; /* Alinea el texto al centro */
+    padding: 10px;
+}
+
+/* Texto dentro del banner */
+.banner-text {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+    font-size: 42px;
+    font-weight: bold; 
+    font-family: 'Roboto', sans-serif; 
+    text-align: center; 
+    padding: 10px;
+}
+
+.image-section {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #f9f9f9;
+}
+
+.image-group {
+    margin-bottom: 30px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    position: relative;
+    width: 350px;
+    height: 540px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.image {
+    width: 350px; 
+    height: 540px; 
+    object-fit: cover; 
+    border: 3px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover */
+.image:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para el overlay (fondo opaco) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 12px; /* Redondea las esquinas */
+}
+
+/* Texto dentro del overlay */
+.text {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Mostrar overlay al pasar el mouse */
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.footer {
+    font-size: 0.9rem;
+}
+
+/* Primera sección del pie de página */
+.footer-top {
+    background-color: #333; 
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-contact {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-social {
+    text-align: right;
+}
+
+.footer-social p {
+    margin-bottom: 10px;
+}
+
+.footer-social a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a img:hover {
+    transform: scale(1.1);
+}
+
+/* Segunda sección del pie de página */
+.footer-bottom {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.contacto {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+.container_contacto {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form_contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form_contacto input,
+.form_contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.mapa iframe {
+    width: 100%;
+    border-radius: 5px;
+}
